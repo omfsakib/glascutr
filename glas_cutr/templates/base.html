@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en" dir="ltr">
 
@@ -14,21 +14,26 @@
         <meta name="Version" content="v4.5.0" />
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="shortcut icon" href="{% static 'images/icon/favicon.ico' %}" />
         
         <!-- Css -->
-        <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+        <link href="{% static 'libs/tiny-slider/tiny-slider.css' %}" rel="stylesheet">
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.css" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/bootstrap.css' %}" id="bootstrap-style" class="theme-opt" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/%40iconscout/unicons/css/line.css" type="text/css" rel="stylesheet" />
+        <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'libs/%40iconscout/unicons/css/line.css' %}" type="text/css" rel="stylesheet" />
         <!-- Style Css-->
-        <link href="assets/css/style.css" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/style.css' %}" id="color-opt" class="theme-opt" rel="stylesheet" type="text/css" />
         
     </head>
     <body>
+        {% include 'components/navigation.html' %}
 
+        <!-- Content Goes Here-->
+        {% block body %}
+
+        {% endblock %}
         
         <!-- Back to top -->
         <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fs-5"><i data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
@@ -36,12 +41,12 @@
 
         <!-- Javascript -->
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
         <!-- SLIDER -->
-        <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+        <script src="{% static 'libs/tiny-slider/min/tiny-slider.js' %}"></script>
         <!-- Main Js -->
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/plugins.init.js"></script>
-        <script src="assets/js/app.js"></script>
+        <script src="{% static 'libs/feather-icons/feather.min.js' %}"></script>
+        <script src="{% static 'js/plugins.init.js' %}"></script>
+        <script src="{% static 'js/app.js' %}"></script>
     </body>
 </html>

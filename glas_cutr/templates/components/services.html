@@ -1,0 +1,78 @@
+
+<section class="section bg-light" id="services">
+   
+            
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <div class="section-title mb-4 pb-2">
+                    <!-- <h6 class="text-primary">Features</h6> -->
+                    <h4 class="title mb-4">{{service.title}}</h4>
+                    <p class="text-muted para-desc mb-0 mx-auto">{{service.description_prev}} <span class="text-primary fw-bold">{{service.description_bold}}</span> {{service.description_next}}</p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row">
+            {% for service in service_list %}
+            <div class="col-lg-6 col-md-6 col-12 mt-4 pt-2" id="services{{forloop.counter}}">
+                    <div class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
+                        <div class="icons text-primary text-center mx-auto">
+                            <div class="service_icon">
+                                <img src="{{service.icon}}" class="d-block rounded mb-0" height="65px" width="65px" style="padding: 15px 15px; background-color: rgba(47, 85, 212, 0.1);" alt="">
+                                
+                            </div>
+                        </div>
+    
+                        <div class="card-body p-0 content">
+                            <h5 class="mt-1"><a href="{{service.url}}" class="title text-dark">{{service.name}}</a></h5>
+                            <p class="text-muted text-sm-start">{{service.description}}
+                            </p>
+                            
+                            {% if service.has_sub %}
+                            <a  id="read-more-button" class="text-primary">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
+                            <!-- Hidden div for pop-up content -->
+                            <div id="popup-wrapper" class="d-none">
+                                <div id="popup-content" class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-left">
+                                <h4>Our Consultancies</h4>
+                                <ul>
+                                    {% for item in service.subservice %}
+                                    <li>{{item.name}}</li>
+                                    {% endfor %}
+                                </ul>
+                                <div id="popup-close">X</div>
+                                </div>
+                            </div>
+                            
+                            {% endif %}
+                        </div>
+                    </div>
+            </div><!--end col-->
+            {% endfor %}
+                
+  
+    <script>
+    // Get the "Read More" button and the pop-up content div
+    const readMoreButton = document.getElementById('read-more-button');
+    const popupWrapper = document.getElementById('popup-wrapper');
+    
+    // Add a click event listener to the "Read More" button
+    readMoreButton.addEventListener('click', () => {
+        // Display the pop-up content in the same window
+        popupWrapper.classList.remove('d-none');
+    });
+    
+    // Add a click event listener to the "Close" button in the pop-up content
+    const popupCloseButton = document.getElementById('popup-close');
+    popupCloseButton.addEventListener('click', () => {
+        // Hide the pop-up content
+        popupWrapper.classList.add('d-none');
+    });
+    </script>      
+  <!--pop end  -->    
+        </div><!--end row-->
+    </div><!--end container-->
+
+</section><!--end section-->
+<!-- awesome features end -->
+        <!-- service end -->

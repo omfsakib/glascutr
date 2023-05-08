@@ -1,0 +1,169 @@
+
+        <!-- contact us start -->
+
+        <div id="contact"></div>
+            <div class="contu">
+                <div class="content">
+                    <div class="container">
+                        <div class="col-12 text-center">
+                            <div class="section-title">
+                                <h4 class="title">
+                                    Contact
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--form start  -->
+             <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="align-items-start">
+                            
+                            <div class="content">
+                                <!-- <div class="pb-2"><h5>Let's Talk!</h5></div> -->
+                               
+                                
+                                <div class="d-flex contact-detail align-items-center mt-3 pb-3">
+                                    <div class="icon">
+                                        <i data-feather="phone" class="fea icon-m-md text-dark me-3"></i>
+                                    </div>
+                                    <div class="flex-1 content">
+                                        <h6 class="title fw-bold mb-0">Phone:</h6>
+                                        <a href="tel:+152534-468-854" class="text-primary">{{contact.phone}}</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex contact-detail align-items-center mt-3 pb-3">
+                                    <div class="icon">
+                                        <i data-feather="mail" class="fea icon-m-md text-dark me-3"></i>
+                                    </div>
+                                    <div class="flex-1 content">
+                                        <h6 class="title fw-bold mb-0">Email:</h6>
+                                        <a href="mailto:contact@example.com" class="text-primary">{{contact.email}}</a>
+                                    </div>
+                                </div>
+                            
+                               <div class="d-flex contact-detail align-items-center mt-3 pb-3">
+                                    <div class="icon">
+                                        <i data-feather="map-pin" class="fea icon-m-md text-dark me-3"></i>
+                                    </div>
+                                    <div class="flex-1 content">
+                                        <h6 class="title fw-bold mb-0">Corporate Office:</h6>
+                                        {{contact.cor_office}}
+                                    </div>
+                                </div>
+                                <div class="d-flex contact-detail align-items-center mt-3">
+                                    <div class="icon">
+                                        <i data-feather="map-pin" class="fea icon-m-md text-dark me-3"></i>
+                                    </div>
+                                    <div class="flex-1 content">
+                                        <h6 class="title fw-bold mb-0">Canada Office:</h6>
+                                        {{contact.can_office}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- contact info end -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card shadow rounded border-0">
+                                <div class="card-body2">
+                                    <!-- <h4 class="card-title"></h4> -->
+                                    <div class="custom-form mt-3">
+                                        <form method="POST">
+                                            {% csrf_token %}
+                                            
+                                            {% if messages %}
+                                            {% for message in messages %}
+                                            <div class="container-fluid p-0">
+                                                <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+                                                    {{ message }}
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                            {% endif %}
+                                            <div id="simple-msg"></div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Name <span class="text-danger">*</span></label>
+                                                        <div class="form-icon position-relative">
+                                                            <i data-feather="user" class="fea icon-sm icons"></i>
+                                                            <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Name :">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                                                        <div class="form-icon position-relative">
+                                                            <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                            <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email :">
+                                                        </div>
+                                                    </div> 
+                                                </div><!--end col-->
+            
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Phone</label>
+                                                        <div class="form-icon position-relative">
+                                                            <i data-feather="book" class="fea icon-sm icons"></i>
+                                                            <input name="phone" id="subject" class="form-control ps-5" placeholder="Phone Number :">
+                                                        </div>
+                                                    </div>
+                                                </div><!--end col-->
+            
+                                                <div class="col-12">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Message<span class="text-danger">*</span></label>
+                                                        <div class="form-icon position-relative">
+                                                            <i data-feather="message-circle" class="fea icon-sm icons"></i>
+                                                            <textarea name="message" id="comments" rows="2" class="form-control ps-5" placeholder="Message :"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="d-grid">
+                                                        <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                                    </div>
+                                                </div><!--end col-->
+                                            </div><!--end row-->
+                                        </form>
+                                    </div><!--end custom-form-->
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end container-->
+                
+               
+        </section>
+        <section>
+        <div class="mapframe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 col-sm-12 col-md-12">
+                            <div class="card map border-0">
+                                <div class="card-body p-0">
+                                    <div class="mobframe"  style="width:100%; max-width:100%;">
+                                    <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1513421513323!2d90.4156661!3d23.7776245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c73bfdf1487f%3A0x9ca774aa49ce25ca!2sGlascutr%20Limited!5e0!3m2!1sen!2sbd!4v1680998958460!5m2!1sen!2sbd" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%
+                                    "></iframe>  
+                                                               
+                                </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end container-->
+       </div>
+    </section>
+
+        
+        
+        <!-- End contact -->

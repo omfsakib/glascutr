@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-3rab6mod)*ati5caiomr!++od*x7hnzoso692w3euw*5y)tr!^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.17']
 
 
 # Application definition
@@ -70,6 +70,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'glas_cutr.context_processors.add_to_context',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',

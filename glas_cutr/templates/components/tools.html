@@ -1,0 +1,31 @@
+
+         <!-- Tools and tech start -->
+         <div id="technologies"></div>
+         <section class="section bg-light">
+          <div class="techmb">
+             <div class="container">
+                 <div class="row justify-content-center">
+                     <div class="col-12 text-center">
+                         <div class="section-title pb-2">
+                             <h4 class="title mb-4" >Tools and Technologies</h4>
+                         </div>
+                     </div><!--end col-->
+                 </div><!--end row-->
+         
+                 <div class="row">
+                    {% for tool in tools %}
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="features text-center pt-3 pb-3">
+                            <img src="{{tool.icon.url}}" class="logo-light-mode" height="{{tool.height}}" alt="">
+                            <!-- <div class="content mt-3">
+                                <h5>Angular</h5>
+                            </div> -->
+                        </div>
+                    </div><!--end col-->
+                    {% endfor %}
+                     
+                 </div><!--end row-->
+             </div><!--end container-->
+             </div>
+         </section><!--end section-->
+         <!-- Tools and tech end -->

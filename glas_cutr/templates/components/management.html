@@ -1,0 +1,35 @@
+
+        <!-- Team starts -->
+        <div id="our_team"></div>
+
+        <section class="team-block bg-light">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                  <h2>{{management.title}}</h2>
+                  <p class="text-muted para-desc mb-md-4 mx-auto">{{management.description_prev}} <span class="text-primary fw-bold">{{management.description_bold}}</span> – {{management.description_next}}</p>                
+                </div>
+              </div>
+              <div class="row">  
+                {% for member in team %}
+                <div class="col-md-3 col-lg-3 col-12">
+                  <div class="card mb-4">
+                    <img src="{{member.profile_img.url}}" class="card-img-top" alt="{{member.name}}">
+                    <div class="card-body-team">
+                      <h6 class="pt-2 text-center">{{member.name}}</h6>
+                      <p class="card-text text-center text-muted">{{member.role}}</p>
+                      <ul class="list-unstyled text-center">
+                        <li><a href="{{member.fb_url}}"><i class="uil uil-facebook"></i></a></li>
+                        <li><a href="{{member.twt_url}}"><i class="uil uil-twitter"></i></a></li>
+                        <li><a href="{{member.lnd_url}}"><i class="uil uil-linkedin"></i></a></li>
+                        <li><a href="{{member.ins_url}}"><i class="uil uil-instagram"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}   
+              </div>
+            </div>
+          </section>
+        
+        <!-- team end -->

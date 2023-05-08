@@ -1,0 +1,27 @@
+
+        <!-- mission start -->
+         <!-- <div class="mmtb"></div> -->
+         <div id="our_mission" style="background-color: #f8f9fa;">
+            <div class="missionsection">
+            <div class="container mt-100 mt-60">
+               <div class="row align-items-center">
+                   <div class="col-lg-6 col-md-6 order-1 order-md-2">
+                       <img src="{{mission.cover_image.url}}" class="img-fluid" alt="">
+                   </div><!--end col-->
+   
+                   <div class="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-1">
+                       <div class="section-title me-lg-5">
+                           <h6 class="title mb-4">{{mission.title}}</h6>
+                           <p> <b> <span class="text-primary fw-bold">{{mission.description_bold}}</span> {{mission.description}}</b></p>
+                           <ul class="list-unstyled text-muted">
+                            {% for item in submission %}
+                            <li><i data-feather="arrow-right-circle" class="fea icon-sm text-primary me-2"></i>{{item.text}}
+                            </li>
+                            {% endfor %}
+                           </ul>
+                       </div>
+                   </div><!--end col-->
+               </div><!--end row-->
+           </div>
+       </div>
+           <!-- mission end -->
