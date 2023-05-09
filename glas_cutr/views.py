@@ -32,8 +32,6 @@ def home(request):
             sub_objs = ServiceList.get_subservice(service_item)
         else:
             sub_objs = []
-            
-        print(sub_objs)
         
         item = {
             'name':service_item.title,

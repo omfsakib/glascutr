@@ -224,7 +224,8 @@ class Tool(BaseModel):
     url = models.CharField(max_length=200)
     def __str__(self):
         return self.name
-    
+
+#Contact Infos GlasCutr Limited
 class ContactInfo(BaseModel):
     number = models.CharField(max_length=20)
     email = models.CharField(max_length=50)
@@ -244,6 +245,7 @@ class ContactInfo(BaseModel):
             raise ValidationError('Delete the previous ContactInfo to upload a new one!')
         return super().save(*args, **kwargs)
 
+#User Generated message
 class UserMessage(models.Model):
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)

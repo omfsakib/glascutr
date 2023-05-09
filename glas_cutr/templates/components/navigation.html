@@ -28,14 +28,14 @@
                 {% for nav_item in nav %}
                 <li class="has-submenu parent-parent-menu-item">
                     {% if nav_item.has_sub %}
-                    <a href="{{nav_item.url}}">{{nav_item.name}}</a><span class="menu-arrow"></span>
-                    <ul class="submenu dropdown" aria-labelledby="dropdownMenuButton">
+                    <a href="{{nav_item.url}}" >{{nav_item.name}}</a><span class="menu-arrow"></span>
+                    <ul class="submenu dropdown">
                         {% for sub_menu in nav_item.subnav %}
-                        <li><a href="{{sub_menu.url}}" class="sub-menu-item">{{sub_menu.name}}</a></li>
+                        <li><a href="{{sub_menu.url}}" onclick="document.getElementById('navigation').style.display = 'none';" class="sub-menu-item">{{sub_menu.name}}</a></li>
                         {% endfor %}
                     </ul>
                     {% else %}
-                    <a href="{{nav_item.url}}" class="sub-menu-item">{{nav_item.name}}</a>
+                    <a href="{{nav_item.url}}" onclick="document.getElementById('navigation').style.display = 'none';" class="sub-menu-item">{{nav_item.name}}</a>
                     {% endif %}                       
                 </li>
                 {% endfor %}

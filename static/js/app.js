@@ -143,9 +143,9 @@ if(document.getElementById("navigation")){
     var elements = document.getElementById("navigation").getElementsByTagName("a");
     for(var i = 0, len = elements.length; i < len; i++) {
         elements[i].onclick = function (elem) {
-            var submenu = elem.target.nextElementSibling.nextElementSibling;
-            if(submenu != null) {
-                submenu.classList.toggle('open');
+            var submenu = elem.target.nextElementSibling;
+            if(submenu != null && submenu.nextElementSibling != null) {
+                submenu.nextElementSibling.classList.toggle('open');
                 return false;
             } else {
                 document.getElementById('isToggle').classList.remove('open');
@@ -154,7 +154,6 @@ if(document.getElementById("navigation")){
         }
     }
 }
-
 // Menu sticky
 function windowScroll() {
     const navbar = document.getElementById("topnav");
